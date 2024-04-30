@@ -84,7 +84,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mb-5">
       <div className="row">
         {showMsg && <p className="fs-4 text-center text-success">{msg}</p>}
         <div className="card-header fs-4 fw-bold text-uppercase text-center mb-3">

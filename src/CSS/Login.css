@@ -1,0 +1,7 @@
+.mybtn {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mybtn:hover {
+  transform: scale(0.9);
+}

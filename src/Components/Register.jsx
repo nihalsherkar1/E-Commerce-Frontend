@@ -54,7 +54,7 @@ const Register = () => {
 
   return (
     <div>
-      <div className="container  " style={{ marginTop: "7rem" }}>
+      <div className="container  mb-5" style={{ marginTop: "3rem" }}>
         <div className="row">
           <div className="card col-md-6 offset-md-3 shadow">
             <div className="card-body">

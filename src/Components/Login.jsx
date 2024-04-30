@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import "../CSS/Login.css";
 const Login = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -39,13 +39,13 @@ const Login = () => {
 
         // Navigate to the home page
 
-        if (userRole === "user") {
-          navigate("/");
-        } else {
-          navigate("/login");
-        }
+        // if (userRole === "user") {
+        //   navigate("/");
+        // } else {
+        //   navigate("/login");
+        // }
 
-        // navigate("/");
+        navigate("/");
       }
     } catch (error) {
       console.error("Error logging in user:", error);
@@ -54,7 +54,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="container" style={{ marginTop: "7rem" }}>
+      <div className="container mb-5" style={{ marginTop: "3rem" }}>
         <div className="row">
           <div className="card col-md-6 offset-md-3 shadow">
             <div className="card-body">
@@ -64,7 +64,7 @@ const Login = () => {
               </div>
               <form action="" onSubmit={handleSubmit}>
                 {/* Email */}
-                <div className="pt-1 d-flex mt-2">
+                <div className="pt-1 d-flex ">
                   <label
                     htmlFor="email"
                     className="card-body text-uppercase fs-6 fw-bold"
@@ -101,7 +101,7 @@ const Login = () => {
                   />
                 </div>
                 <div>
-                  <button className="btn btn-primary p-2 m-4 col-md-6 shadow">
+                  <button className="btn btn-primary p-2 m-4 col-md-6 shadow mybtn">
                     Sign In
                   </button>
                   <br />

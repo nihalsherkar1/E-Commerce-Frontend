@@ -1,7 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Popover, Overlay } from "react-bootstrap";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [msg, setMsg] = useState("");
+  const [showPopover, setShowPopover] = useState(false);
+
+  const handleLogout = () => {
+    if (localStorage.getItem("userId")) {
+      localStorage.removeItem("userId");
+      setMsg("Logout Successful!");
+      setShowPopover(true);
+      setTimeout(() => {
+        navigate("/");
+        window.location.reload();
+      }, 500);
+    } else {
+      setMsg("You are not Logged In....Please LogIn!!!");
+      setShowPopover(true);
+      setTimeout(() => {
+        navigate("/");
+        window.location.reload();
+      }, 1000);
+    }
+  };
+  const target = useRef(null);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -56,6 +79,30 @@ const Navbar = () => {
                     <i className="fa-solid fa-cart-shopping text-light fa-lg "></i>{" "}
                     Cart
                   </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active fs-3x"
+                    href="#"
+                    ref={target}
+                    onClick={handleLogout}
+                  >
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>{" "}
+                    Logout
+                  </Link>
+                  {/* {msg && (
+                    <p className="fs-4 text-center text-success">{msg}</p>
+                  )} */}
+                  <Overlay
+                    show={showPopover}
+                    target={target.current}
+                    placement="bottom-end"
+                  >
+                    <Popover id="popover-basic">
+                      <Popover.Header as="h3">Success!</Popover.Header>
+                      <Popover.Body>{msg}</Popover.Body>
+                    </Popover>
+                  </Overlay>
                 </li>
               </ul>
             </div>
