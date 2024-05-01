@@ -48,47 +48,79 @@ const Footer = () => {
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Products</h6>
                 <p>
-                  <a href="#!" className="text-reset">
-                    Angular
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    ELECTROMICS
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
-                    React
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    HOME APPLIANCES
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
-                    Vue
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    SPORTS
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
-                    Laravel
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    CLOTHING
                   </a>
                 </p>
               </div>
 
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-                <p>
-                  <a href="#!" className="text-reset">
-                    Pricing
+                <p className="">
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    CAREER
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
-                    Settings
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    ABOUT US
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
-                    Orders
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    ORDER
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
-                    Help
+                  <a
+                    href="#!"
+                    className="text-reset"
+                    style={{ textDecoration: "none" }}
+                  >
+                    HELP
                   </a>
                 </p>
               </div>
@@ -96,11 +128,11 @@ const Footer = () => {
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <i className="fas fa-home me-3"></i> New York, NY 10012, US
+                  <i className="fas fa-home me-3"></i>Maharashtra, India
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3"></i>
-                  info@example.com
+                  ecommerce@gmail.com
                 </p>
                 <p>
                   <i className="fas fa-phone me-3"></i> + 91 8806345522
@@ -123,7 +155,7 @@ const Footer = () => {
             href="# "
             style={{ textDecoration: "none" }}
           >
-            Nihal Sherkar
+            E-COMMERCE
           </a>
         </div>
       </footer>

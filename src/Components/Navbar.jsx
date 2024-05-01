@@ -12,7 +12,7 @@ const Navbar = () => {
       setMsg("Logout Successful!");
       setShowPopover(true);
       setTimeout(() => {
-        navigate("/");
+        navigate("/login");
         window.location.reload();
       }, 500);
     } else {
@@ -55,11 +55,11 @@ const Navbar = () => {
                   <i class="fa-solid fa-user-plus mx-2"></i>Register
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link active" href="#" to={"/login"}>
                   <i class="fa-solid fa-right-to-bracket mx-2"></i>Login
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link active" href="#" to={"/addproduct"}>
                   <i class="fa-solid fa-plus mx-1"></i> Add Product

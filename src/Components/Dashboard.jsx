@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Cart from "./Cart";
+import MyCarousel from "./MyCarousel";
 
 const Dashboard = () => {
   const [productList, setProductList] = useState([]);
@@ -86,12 +87,13 @@ const Dashboard = () => {
   return (
     <div className="container mt-5 mb-5">
       <div className="row">
+        <MyCarousel />
         {showMsg && <p className="fs-4 text-center text-success">{msg}</p>}
-        <div className="card-header fs-4 fw-bold text-uppercase text-center mb-3">
+        {/* <div className="card-header fs-4 fw-bold text-uppercase text-center mb-3">
           Product
-        </div>
+        </div> */}
         {productList.map((product) => (
-          <div key={product.id} className="col-md-4 mb-4">
+          <div key={product.id} className="col-md-4 mb-4 mt-5">
             <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">

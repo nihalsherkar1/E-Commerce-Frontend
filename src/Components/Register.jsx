@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [data, setData] = useState({
@@ -10,7 +10,7 @@ const Register = () => {
     role: "USER",
   });
   const [msg, setMsg] = useState("");
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -32,10 +32,11 @@ const Register = () => {
           },
         }
       );
-
+      setMsg("Registration successful.....");
       setTimeout(() => {
-        setMsg("User added successfully.....");
-        window.location.reload();
+        navigate("/login");
+
+        // window.location.reload();
       }, 1000);
 
       console.log("User registerd successfully: ", response.data);

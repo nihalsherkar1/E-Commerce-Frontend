@@ -39,13 +39,11 @@ const Login = () => {
 
         // Navigate to the home page
 
-        // if (userRole === "user") {
-        //   navigate("/");
-        // } else {
-        //   navigate("/login");
-        // }
-
-        navigate("/");
+        if (userRole === "USER") {
+          navigate("/");
+        } else {
+          navigate("/login");
+        }
       }
     } catch (error) {
       console.error("Error logging in user:", error);
